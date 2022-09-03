@@ -71,8 +71,11 @@ def main():
             scraper.get_repo_names(git_username)
             print(
                 'Enter the number next to the repos you want to clone separated by a space.')
+            repo_indexes = input('Enter repo numbers: ').split()
+            for index in repo_indexes:
+                repo_indexes[repo_indexes.index(index)] = int(index)
             scraper.clone_selected_repos(
-                git_username, path, input('Enter repo numbers: ').split())
+                git_username, path, repo_indexes=repo_indexes)
             print('Cloning selected repos...')
             print('Cloning successful!')
         elif choice == '4':
