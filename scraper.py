@@ -40,13 +40,6 @@ def scraper(git_username):
             conn.commit()
 
 
-scraper('mozillazg')
-scraper('facebook')
-scraper('vuejs')
-scraper('tensorflow')
-scraper('apple')
-
-
 def clone_all_repos(git_username, path):
     c.execute("SELECT * FROM user_repos WHERE username=:un", {
         'un': git_username})
