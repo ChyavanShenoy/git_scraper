@@ -1,10 +1,10 @@
 #! /usr/bin/env python3
 
 import install_deps
-import user_auth
 from os import system, name
 from logo import logo_art
 import scraper
+import user_auth
 
 logged_in = False
 
